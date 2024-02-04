@@ -19,11 +19,12 @@
 
       body.dark-mode {
         background-color: #333;
-        color: #fff;
+        color: #fffs;
       }
       body.dark-mode .card {
         background-color: #ffffff;
         color: #333;
+        border: 0px;
       }
 
       /* Add your custom styles here */
@@ -32,9 +33,13 @@
         background-color: #fff; /* White background for the navbar */
         box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
       }
-      card {
-        color: #000000;
-        fontcolor: #000000;
+
+      .card {
+        border: none; /* Remove the border */
+        margin: 20px 0;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
 
       #navbar a {
@@ -53,13 +58,13 @@
       }
 
       .project-card {
-        /* Style for project cards */
+        border: none; /* Remove the border */
         margin: 20px 0;
         padding: 20px;
-        border: 0px solid #ccc;
         border-radius: 5px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
+
       project-item {
         color: #000000;
       }
@@ -68,8 +73,23 @@
         width: 50px; /* Adjust the width as needed */
         margin-right: 10px;
       }
+      #profile-photo img {
+        width: 150px; /* Adjust the size as needed */
+        height: 150px;
+        object-fit: cover; /* Ensure the image covers the entire container */
+        border-radius: 50%; /* Create a round shape */
+        margin-bottom: 20px; /* Adjust the margin as needed */
+      }
 
-      /* Add animations and other styles as needed */
+      /* Center the "Research Experience" title */
+      #research-experience h2,
+      #contact h2,
+      #projects h2,
+      #experience h2,
+      #about h2,
+      #carousel-section h2 {
+        text-align: center;
+      }
     </style>
   </head>
   <body>
@@ -114,8 +134,12 @@
     </nav>
 
     <!-- Experience Section -->
+
     <section id="about">
       <div class="container mt-5">
+        <div id="profile-photo" class="text-center">
+          <img src="photo.png" alt="Your Name" class="rounded-circle" />
+        </div>
         <h2>About Me</h2>
         <p>
           I am Muzny Zuhair, a passionate Machine Learning Engineer with a focus
@@ -136,12 +160,17 @@
         </p>
       </div>
     </section>
+
     <!-- Carousel Section -->
     <section id="carousel-section">
       <div class="container">
         <h2>Gallery</h2>
 
-        <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+        <div
+          id="imageCarousel"
+          class="carousel slide card"
+          data-ride="carousel"
+        >
           <div class="carousel-inner">
             <!-- Image 1 -->
             <div class="carousel-item active">
@@ -204,7 +233,7 @@
         <h2>Experience</h2>
 
         <!-- ML Engineer (Intern) at Dialog Axita PLC -->
-        <div class="experience-item">
+        <div class="experience-item mt-5 card">
           <a href="https://www.dialog.lk/" target="_blank">
             <img
               src="Dialog_Axiata_logo.svg.png"
@@ -232,9 +261,10 @@
             Procedures, S3 buckets, SageMaker, Agile
           </p>
         </div>
+        <div class="space"></div>
 
         <!-- Full-stack Developer at Blocks-Stars (PVT Ltd) -->
-        <div class="experience-item">
+        <div class="experience-item mt-5 card">
           <a href="https://blockstarsglobal.com/" target="_blank">
             <img
               src="blockstarts.png"
@@ -258,9 +288,10 @@
             Analysis, Data Visualization, GitLab, AWS
           </p>
         </div>
+        <div class="space"></div>
 
         <!-- Research Assistant Engineer at University of Ruhuna -->
-        <div class="experience-item">
+        <div class="experience-item mt-5 card">
           <a href="https://www.eng.ruh.ac.lk/" target="_blank">
             <img
               src="UOR.png"
@@ -285,9 +316,9 @@
             Medical Imaging
           </p>
         </div>
-
+        <div class="space"></div>
         <!-- Finalist Veracity OpenAI Challenge -->
-        <div class="experience-item">
+        <div class="experience-item mt-5 card">
           <a href="https://www.veracitygp.com/" target="_blank">
             <img
               src="veracity.png"
@@ -311,9 +342,9 @@
             Medical Imaging
           </p>
         </div>
-
+        <div class="space"></div>
         <!-- Student Instructor at Faculty of Engineering -->
-        <div class="experience-item">
+        <div class="experience-item mt-5 card">
           <a href="https://www.eng.ruh.ac.lk/" target="_blank">
             <img
               src="UOR.png"
@@ -337,6 +368,7 @@
     <section id="research-experience">
       <div class="container">
         <h2>Research Experience</h2>
+        <hr />
         <div class="card mt-5">
           <h3>
             Automated Computer Assisted Stroke Rehabilitation for Stroke
@@ -358,7 +390,7 @@
             innovative expertise in physiotherapy and neurorehabilitation.
           </p>
         </div>
-
+        <div class="space"></div>
         <!-- Improvement of Early Detection of Parkinson’s Disease -->
         <div class="card project-item mt-5">
           <h3>
@@ -380,6 +412,7 @@
             applicability of the research endeavors.
           </p>
         </div>
+        <div class="space"></div>
 
         <!-- Adaptive Cue System using Edge ML for Gait Improvement -->
         <div class="card mt-5">
@@ -402,6 +435,7 @@
             to the Sri Lankan context within a $100 budget.
           </p>
         </div>
+        <div class="space"></div>
 
         <!-- Optimizing Notification Delivery Using Reinforcement Learning -->
         <div class="card project-item mt-5">
@@ -433,9 +467,10 @@
     <section id="projects">
       <div class="container">
         <h2>Projects</h2>
+        <hr />
 
         <!-- Project 1: Improvement of Early Detection of Parkinson's Disease -->
-        <div class="project-item">
+        <div class="project-item card">
           <h3>
             Improvement of Early Detection of Parkinson's Disease Using Machine
             Learning
@@ -454,7 +489,7 @@
         <div class="space"></div>
 
         <!-- Project 2: Adaptive Cue System Using Edge ML for Gait Improvement -->
-        <div class="project-item">
+        <div class="project-item card">
           <h3>
             Adaptive System Cue System Using Edge ML for Gait Improvement in
             Patients with Parkinson's Disease
@@ -477,7 +512,7 @@
         <div class="space"></div>
 
         <!-- Project 3: Generating Interactive Music Using Image Features -->
-        <div class="project-item">
+        <div class="project-item card">
           <h3>Generating Interactive Music Using Image Features</h3>
           <p>
             Processed Images and Extracted Features using effective fracture
@@ -494,7 +529,7 @@
         <div class="space"></div>
 
         <!-- Project 4: Human Activity Recognition with Smartphones -->
-        <div class="project-item">
+        <div class="project-item card">
           <h3>Human Activity Recognition with Smartphones</h3>
           <p>
             Created ML models for human activity prediction using smartphone
@@ -512,7 +547,7 @@
         <div class="space"></div>
 
         <!-- Project 5: Optimizing Notification Delivery Using Reinforcement Learning -->
-        <div class="project-item">
+        <div class="project-item card">
           <h3>Optimizing Notification Delivery Using Reinforcement Learning</h3>
           <p>
             Segmented a 20 million customer base into 30+ clusters using usage
@@ -534,7 +569,7 @@
         <div class="space"></div>
 
         <!-- Project 6: Integrated Knowledge Management system using Langchain and GPT 4 -->
-        <div class="project-item">
+        <div class="project-item card">
           <h3>
             Integrated Knowledge Management system using Langchain and GPT 4
           </h3>
@@ -555,7 +590,7 @@
         <div class="space"></div>
 
         <!-- Project 7: Local Vegetable Market Application -->
-        <div class="project-item">
+        <div class="project-item card">
           <h3>Local Vegetable Market Application</h3>
           <p>
             Developed a MERN stack supermarket app for seamless user shopping
@@ -612,6 +647,41 @@
 
         themeIcon.textContent = isDarkMode ? "🌝" : "🌞";
       }
+      // Use an event listener to trigger the animation when the Projects section is in view
+      document.addEventListener("DOMContentLoaded", function () {
+        var projectsSection = document.getElementById("projects");
+        var projectHr = document.getElementById("projectHr");
+
+        // Check if the element is in the viewport
+        function isInViewport(element) {
+          var rect = element.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <=
+              (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <=
+              (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+
+        // Add or remove the animation class based on visibility
+        function toggleHrAnimation() {
+          if (isInViewport(projectsSection)) {
+            projectHr.classList.add("animate-hr");
+          } else {
+            projectHr.classList.remove("animate-hr");
+          }
+        }
+
+        // Initial check on page load
+        toggleHrAnimation();
+
+        // Add scroll event listener for continuous checking
+        window.addEventListener("scroll", function () {
+          toggleHrAnimation();
+        });
+      });
     </script>
 
     <!-- Your custom scripts for animations and other interactions -->
