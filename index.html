@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muzny Zuhair - Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        transition: background-color 0.5s ease, color 0.5s ease;
+      }
+
+      body.dark-mode {
+        background-color: #333;
+        color: #fff;
+      }
+      body.dark-mode .card {
+        background-color: #ffffff;
+        color: #333;
+      }
+
+      /* Add your custom styles here */
+
+      #navbar {
+        background-color: #fff; /* White background for the navbar */
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+      }
+      card {
+        color: #000000;
+        fontcolor: #000000;
+      }
+
+      #navbar a {
+        color: #333;
+      }
+
+      .theme-selector {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .project-card {
+        /* Style for project cards */
+        margin: 20px 0;
+        padding: 20px;
+        border: 0px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      project-item {
+        color: #000000;
+      }
+
+      .company-logo {
+        width: 50px; /* Adjust the width as needed */
+        margin-right: 10px;
+      }
+
+      /* Add animations and other styles as needed */
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Muzny Zuhair</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#research-experience">Research</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="theme-selector" onclick="toggleTheme()">
+              <span id="theme-icon">🌞</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Experience Section -->
+    <section id="about">
+      <div class="container mt-5">
+        <h2>About Me</h2>
+        <p>
+          I am Muzny Zuhair, a passionate Machine Learning Engineer with a focus
+          on full-stack development, signal processing, computer vision, and
+          natural language processing. Holding a Bachelor's degree in Electrical
+          and Information Engineering from the University of Ruhuna, I am
+          dedicated to leveraging AI to drive innovation. My academic journey
+          includes specialized studies in electronics and software engineering,
+          coupled with hands-on research experiences.
+        </p>
+        <p>
+          As an intern at Dialog Axita PLC, I optimized notification delivery
+          for a vast customer base using reinforcement learning. I've also
+          contributed to groundbreaking research in Brain-Computer Interfaces
+          for stroke rehabilitation and early detection of Parkinson's disease.
+          With a robust skill set in TensorFlow, PyTorch, OpenAI APIs, and more,
+          I am committed to advancing AI solutions for real-world challenges.
+        </p>
+      </div>
+    </section>
+    <!-- Carousel Section -->
+    <section id="carousel-section">
+      <div class="container">
+        <h2>Gallery</h2>
+
+        <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Image 1 -->
+            <div class="carousel-item active">
+              <img src="2.png" class="d-block w-100" alt="Image 1" />
+              <div class="carousel-caption d-none d-md-block">
+                <p>Text for Image 1</p>
+              </div>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="carousel-item">
+              <img src="3.png" class="d-block w-100" alt="Image 2" />
+              <div class="carousel-caption d-none d-md-block">
+                <p>Text for Image 2</p>
+              </div>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="carousel-item">
+              <img src="4.png" class="d-block w-100" alt="Image 3" />
+              <div class="carousel-caption d-none d-md-block">
+                <p>Text for Image 3</p>
+              </div>
+            </div>
+
+            <!-- Image 4 -->
+            <div class="carousel-item">
+              <img src="5.png" class="d-block w-100" alt="Image 4" />
+              <div class="carousel-caption d-none d-md-block">
+                <p>Text for Image 4</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation arrows -->
+          <a
+            class="carousel-control-prev"
+            href="#imageCarousel"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#imageCarousel"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <h2>Experience</h2>
+
+        <!-- ML Engineer (Intern) at Dialog Axita PLC -->
+        <div class="experience-item">
+          <a href="https://www.dialog.lk/" target="_blank">
+            <img
+              src="Dialog_Axiata_logo.svg.png"
+              alt="Dialog Axita Logo"
+              class="company-logo"
+            />
+          </a>
+          <h3>
+            ML Engineer (Intern) | Dialog Axita PLC | May 2023 - Present (6
+            MONTHS)
+          </h3>
+          <p>
+            Responsible for optimizing notification delivery for a 20 million
+            customer base using reinforcement learning. Tasks include clustering
+            customers into segments, collecting campaign details from Snowflake
+            databases, offline training, and developing an initial Q-Learning RL
+            model using AWS Sagemaker. Evaluated the model through A/B testing
+            against the existing Deep learning system. Implemented Python
+            modules and Snowflake stored procedures for clustering, data
+            collection, offline and online learning, notification delivery, and
+            monitoring.
+          </p>
+          <p>
+            <strong>Skills:</strong> Deep Q Networks, Snowflake Stored
+            Procedures, S3 buckets, SageMaker, Agile
+          </p>
+        </div>
+
+        <!-- Full-stack Developer at Blocks-Stars (PVT Ltd) -->
+        <div class="experience-item">
+          <a href="https://blockstarsglobal.com/" target="_blank">
+            <img
+              src="blockstarts.png"
+              alt="Blocks Stars Logo"
+              class="company-logo"
+            />
+          </a>
+          <h3>
+            Full-stack Developer | Blocks-Stars (PVT Ltd) | March 2021 - August
+            2021
+          </h3>
+          <p>
+            Worked on MERN stack development for Crypto/NFT platforms, gambling
+            sites, and an email signature generator. Integrated AM Charts,
+            Canvas JS, MongoDB, and React for dynamic visualizations and tools.
+            Managed version control with GitLab and ensured continuous
+            deployment on AWS.
+          </p>
+          <p>
+            <strong>Skills:</strong> MERN, Blockchain, Socket Connection, Data
+            Analysis, Data Visualization, GitLab, AWS
+          </p>
+        </div>
+
+        <!-- Research Assistant Engineer at University of Ruhuna -->
+        <div class="experience-item">
+          <a href="https://www.eng.ruh.ac.lk/" target="_blank">
+            <img
+              src="UOR.png"
+              alt="University of Ruhuna Logo"
+              class="company-logo"
+            />
+          </a>
+          <h3>
+            Research Assistant Engineer | Faculty of Engineering, University of
+            Ruhuna | July 2022 - Present
+          </h3>
+          <p>
+            Conducting research on BCI EEG-controlled FES for stroke
+            rehabilitation. Responsible for data collection, including dry EEG &
+            EMG data for 60 clinical trials. Performed pre and post EMG, EEG
+            Medical Image Analysis with filtering and Feature Engineering.
+            Applied SVM Algorithm for predicting human action with high
+            accuracies.
+          </p>
+          <p>
+            <strong>Skills:</strong> MATLAB, Digital Signal Processing, Arduino,
+            Medical Imaging
+          </p>
+        </div>
+
+        <!-- Finalist Veracity OpenAI Challenge -->
+        <div class="experience-item">
+          <a href="https://www.veracitygp.com/" target="_blank">
+            <img
+              src="veracity.png"
+              alt="Veracity OpenAI Challenge Logo"
+              class="company-logo"
+              href="https://www.veracitygp.com/"
+          /></a>
+          <h3>
+            Finalist Veracity OpenAI Challenge | Team Leader | Nov 2023 -
+            Ongoing
+          </h3>
+          <p>
+            Led one of the top 7 teams in building an Intelligent Knowledge
+            Management System (IKMS) for efficient information retrieval from a
+            PDF. Used Langchain for text splitting, built vector spaces, and
+            fine-tuned LLMS for open-source models. Utilized OpenAI Gpt-4 API to
+            generate responses for prompts.
+          </p>
+          <p>
+            <strong>Skills:</strong> MATLAB, Digital Signal Processing, Arduino,
+            Medical Imaging
+          </p>
+        </div>
+
+        <!-- Student Instructor at Faculty of Engineering -->
+        <div class="experience-item">
+          <a href="https://www.eng.ruh.ac.lk/" target="_blank">
+            <img
+              src="UOR.png"
+              alt="Faculty of Engineering Logo"
+              class="company-logo"
+            />
+          </a>
+          <h3>
+            Student Instructor | Faculty of Engineering | Dec 2022 - Oct 2023
+          </h3>
+          <p>
+            Conducted and evaluated laboratory sessions for 3rd-semester
+            undergraduates of the Department of Electrical & Information
+            Engineering.
+          </p>
+          <p><strong>Skills:</strong> Practical, Teaching, Evaluating</p>
+        </div>
+      </div>
+    </section>
+    <!-- Research Experience Section -->
+    <section id="research-experience">
+      <div class="container">
+        <h2>Research Experience</h2>
+        <div class="card mt-5">
+          <h3>
+            Automated Computer Assisted Stroke Rehabilitation for Stroke
+            Patients
+          </h3>
+          <img src="4.png" alt="Project 2 Image" />
+
+          <p>Mentors: Dr. N.W.Prins (University of Ruhuna) | 2022 – Present</p>
+          <p>
+            Contributed to a groundbreaking feasibility study integrating
+            Brain-Computer Interface (BCI) with Functional Electrical
+            Stimulation (FES) for upper extremity stroke rehabilitation.
+            Developed a BCI system using EEG and SVM/RF algorithms, achieving
+            accuracies of 51-54%. Led a team in recruiting and assessing six
+            subjects, demonstrating improved functional scores (FMA, BI, CAHAI).
+            Findings indicate BCI’s enhanced impact on electrophysiological
+            changes in acute stroke cases. Positioned as a key contributor to
+            advancements in stroke rehabilitation methodologies, showcasing
+            innovative expertise in physiotherapy and neurorehabilitation.
+          </p>
+        </div>
+
+        <!-- Improvement of Early Detection of Parkinson’s Disease -->
+        <div class="card project-item mt-5">
+          <h3>
+            Improvement of Early Detection of Parkinson’s Disease Using Machine
+            Learning
+          </h3>
+          <img src="2.png" alt="Project 2 Image" />
+
+          <p>Mentors: Dr. N.W.Prins (University of Ruhuna) | 2022 – Present</p>
+          <p>
+            Entered the field of early Parkinson’s disease diagnosis, focusing
+            on developing a diagnostic system for early detection using voice
+            samples, handwritten samples, and Gait IMU Data. Crafted and
+            fine-tuned machine learning and deep learning models achieving an
+            impressive 98% accuracy in detecting Parkinson’s disease. Developed
+            a mobile-compatible software application for seamless data
+            collection and prediction. Successfully applied for and obtained
+            data from real-world patients, reinforcing the practical
+            applicability of the research endeavors.
+          </p>
+        </div>
+
+        <!-- Adaptive Cue System using Edge ML for Gait Improvement -->
+        <div class="card mt-5">
+          <h3>
+            Adaptive Cue System using Edge ML for Gait Improvement in Patients
+            with Parkinson’s Disease
+          </h3>
+          <img src="3.png" alt="Project 2 Image" />
+          <p>Mentors: Dr. N.W.Prins (University of Ruhuna) | 2022 – Present</p>
+          <p>
+            Engineered an Edge System for acquiring leg acceleration data,
+            implementing robust time series analysis, and precise Feature
+            Engineering. Developed diverse Machine Learning and Deep Learning
+            models for accurate gait classification. Deployed models on Arduino
+            BLE Sense 33 within its 1MB capacity. Established a low-cost, Sri
+            Lanka-compatible hardware system for monitoring patient gait,
+            incorporating auditory, visual, and tactile (vibratory) cues.
+            Innovated an adaptive cue system to enhance walking in Parkinson’s
+            Disease patients, emphasizing cost-effectiveness and applicability
+            to the Sri Lankan context within a $100 budget.
+          </p>
+        </div>
+
+        <!-- Optimizing Notification Delivery Using Reinforcement Learning -->
+        <div class="card project-item mt-5">
+          <h3>Optimizing Notification Delivery Using Reinforcement Learning</h3>
+          <img src="5.png" alt="Project 2 Image" />
+
+          <p>
+            Mentor: Mr. Dinuka Samarakoon (Senior Data Scientist - Dialog Axiata
+            PLC) | 2023 (June) – Present
+          </p>
+          <p>
+            Led optimization efforts for Dialog Axiata PLC, enhancing
+            notification delivery for product promotions. Replaced the existing
+            deep learning model with a Q-Learning-based reinforcement model to
+            boost promotion uptake rates. Managed end-to-end responsibilities,
+            including data retrieval, cleansing, reward assignment, and model
+            development for a customer base of around 20 million. Achieved an
+            impressive 80% improvement in initial A/B tests, demonstrating the
+            significant success of the new approach in elevating promotion
+            performance and customer engagement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <!-- Projects Section -->
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+
+        <!-- Project 1: Improvement of Early Detection of Parkinson's Disease -->
+        <div class="project-item">
+          <h3>
+            Improvement of Early Detection of Parkinson's Disease Using Machine
+            Learning
+          </h3>
+          <p>
+            Developed a novel system predicting early Parkinson's using
+            Handwriting, Voice, and gait data. Hosted a mobile app with JS and
+            Flask API to collect regular data. Utilized transfer learning with
+            VGG16 feature extraction, achieving a 98% accuracy in a multi-modal
+            pipeline for predicting early Parkinson's.
+          </p>
+          <p>Skills - MERN, CNN, DT, LSTM, SVM</p>
+        </div>
+
+        <!-- Space between projects -->
+        <div class="space"></div>
+
+        <!-- Project 2: Adaptive Cue System Using Edge ML for Gait Improvement -->
+        <div class="project-item">
+          <h3>
+            Adaptive System Cue System Using Edge ML for Gait Improvement in
+            Patients with Parkinson's Disease
+          </h3>
+          <p>
+            Designed hardware and software for three-part leg data acquisition.
+            (code) Conducted time series data analysis and implemented data
+            cleaning for Feature Engineering. Developed ML & DL models
+            classifying gait into six categories, hosted on Arduino BLE Sense
+            33. (code) Created a patient performance monitoring system with
+            Flask API, CanvasJS, and ReactJS. Implemented adaptive cues
+            (Auditory, Visual, Tactile) based on ML predictions.
+          </p>
+          <p>
+            Skills - Edge ML, Arduino BLE Sense 33, CNN, RNN, LSTM, DT, Flask
+          </p>
+        </div>
+
+        <!-- Space between projects -->
+        <div class="space"></div>
+
+        <!-- Project 3: Generating Interactive Music Using Image Features -->
+        <div class="project-item">
+          <h3>Generating Interactive Music Using Image Features</h3>
+          <p>
+            Processed Images and Extracted Features using effective fracture
+            extraction methods. Extracted Features were converted to HSV Scale.
+            The values were mapped to a range of piano keys. Added octaves and
+            Variations to create better music.
+          </p>
+          <p>
+            Skills - Object detection, Image classification and segmentation
+          </p>
+        </div>
+
+        <!-- Space between projects -->
+        <div class="space"></div>
+
+        <!-- Project 4: Human Activity Recognition with Smartphones -->
+        <div class="project-item">
+          <h3>Human Activity Recognition with Smartphones</h3>
+          <p>
+            Created ML models for human activity prediction using smartphone
+            sensor data. Preprocessed accelerometer and gyroscope data. Applied
+            SVM and random forest algorithms for classification in practical
+            activity recognition.
+          </p>
+          <p>
+            Skills - TimeSeries data, LSTM, Data Preprocessing, Backend
+            development
+          </p>
+        </div>
+
+        <!-- Space between projects -->
+        <div class="space"></div>
+
+        <!-- Project 5: Optimizing Notification Delivery Using Reinforcement Learning -->
+        <div class="project-item">
+          <h3>Optimizing Notification Delivery Using Reinforcement Learning</h3>
+          <p>
+            Segmented a 20 million customer base into 30+ clusters using usage
+            patterns, demographics, and features. Gathered 36-month campaign
+            details from Snowflake databases. Established an environment, built
+            an agent, and designed a reward system for offline Q-learning
+            training. Evaluated model performance with hyperparameter-tuned
+            models. Integrated model outcomes into the delivery pipeline,
+            covering reward collection, model updating, and monitoring. -
+            (Article)
+          </p>
+          <p>
+            Skills - Clustering, RL, Snowflake procedures, ML pipeline,
+            SageMaker Pipelines
+          </p>
+        </div>
+
+        <!-- Space between projects -->
+        <div class="space"></div>
+
+        <!-- Project 6: Integrated Knowledge Management system using Langchain and GPT 4 -->
+        <div class="project-item">
+          <h3>
+            Integrated Knowledge Management system using Langchain and GPT 4
+          </h3>
+          <p>
+            Build a Streamlit and Langchain-based chat application that takes
+            multiple PDFs and processes and replies to the prints based on the
+            PDF data store the data in chunks of embedded vectors in a vector
+            store chromed user prompts and embedding to the words, similarity
+            search from vector db.
+          </p>
+          <p>
+            Skills - LangChain, Vector Databases(ChromaDB), OpenAI, PaLM2,
+            Streamlight
+          </p>
+        </div>
+
+        <!-- Space between projects -->
+        <div class="space"></div>
+
+        <!-- Project 7: Local Vegetable Market Application -->
+        <div class="project-item">
+          <h3>Local Vegetable Market Application</h3>
+          <p>
+            Developed a MERN stack supermarket app for seamless user shopping
+            with browsing, ordering, and payment features.
+          </p>
+          <p>Skills - MERN Full Stack Development, OOP, DSA, API Development</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Email: eg183270@engug.ruh.ac.lk</p>
+        <p>
+          GitHub:
+          <a href="https://github.com/muznyahamed"
+            >https://github.com/muznyahamed</a
+          >
+        </p>
+        <p>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/muznyzuhair/"
+            >https://www.linkedin.com/in/muznyzuhair/</a
+          >
+        </p>
+        <p>
+          Medium:
+          <a href="https://medium.com/@muzny.zuhair"
+            >https://medium.com/@muzny.zuhair</a
+          >
+        </p>
+        <p>Phone: +94 77 33 22 6 44</p>
+        <p>Location: Colombo, Sri Lanka</p>
+      </div>
+    </section>
+
+    <!-- Bootstrap and JS scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      function toggleProjectInfo(projectId) {
+        var projectInfo = document.getElementById(projectId);
+        projectInfo.classList.toggle("show");
+      }
+      function toggleTheme() {
+        const body = document.body;
+        const themeIcon = document.getElementById("theme-icon");
+
+        body.classList.toggle("dark-mode");
+        const isDarkMode = body.classList.contains("dark-mode");
+
+        themeIcon.textContent = isDarkMode ? "🌝" : "🌞";
+      }
+    </script>
+
+    <!-- Your custom scripts for animations and other interactions -->
+  </body>
+</html>
