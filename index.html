@@ -20,9 +20,9 @@
 
       body.dark-mode {
         background-color: #333;
-        color: #fffs;
+        color: #fff;
       }
-      body.dark-mode .card {
+      body.dark-mode .card  {
         background-color: #ffffff;
         color: #333;
         border: 0px;
@@ -91,10 +91,54 @@
       #contact h2,
       #projects h2,
       #experience h2,
-      #about h2,
+      #about h2,h5,
       #carousel-section h2,#extra-curricular h2 {
         text-align: center;
       }
+       #interests {
+    background-color: #f8f9fa; /* Set a background color for the interests section */
+    padding: 60px 0; /* Add some padding to the top and bottom of the section */
+  }
+
+  #interests h2 {
+    text-align: center;
+    color: #343a40; /* Set the color of the section title */
+  }
+
+  #interestsCarousel {
+    margin-top: 20px; /* Add some space between the section title and the carousel */
+  }
+
+  .interest-card {
+    background-color: #fff; /* Set the background color of the interest cards */
+    border-radius: 10px; /* Add rounded corners to the interest cards */
+    padding: 20px; /* Add padding inside the interest cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+    text-align: center;
+  }
+
+  .interest-card h3 {
+    color: #007bff; /* Set the color of the interest card titles */
+  }
+
+  .interest-card p {
+    color: #555; /* Set the color of the text within the interest cards */
+  }
+
+  /* Customize the carousel navigation arrows */
+  .carousel-control-prev, .carousel-control-next {
+    width: 5%; /* Adjust the size of the navigation arrows */
+  }
+
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(30%); /* Invert the color of the arrow icons */
+  }
+  .intro{
+    text-align: center;
+  }
+     
+  
+
     </style>
   </head>
   <body>
@@ -144,30 +188,91 @@
     <!-- Experience Section -->
 
     <section id="about">
-      <div class="container mt-5">
+      <div class="container mx-auto card mt-5">
         <div id="profile-photo" class="text-center">
           <img src="photo.png" alt="Your Name" class="rounded-circle" />
         </div>
-        <h2>About Me</h2>
-        <p>
-          I am Muzny Zuhair, a passionate Machine Learning Engineer with a focus
-          on full-stack development, signal processing, computer vision, and
-          natural language processing. Holding a Bachelor's degree in Electrical
-          and Information Engineering from the University of Ruhuna, I am
-          dedicated to leveraging AI to drive innovation. My academic journey
-          includes specialized studies in electronics and software engineering,
-          coupled with hands-on research experiences.
+        <h2>Muzny Zuhair</h2>
+        <h5>BSc. (Hons) in Electrical and Information Engineering</h5>
+        <p class="intro mt-4">
+          I am Muzny Zuhair, a dedicated Machine Learning Engineer and Biomedical Researcher. Armed with a BSc. (Hons) in Electrical and Information Engineering from the University of Ruhuna, my academic journey has honed my expertise in signal processing, computer vision, and natural language processing. A passionate advocate for leveraging AI in healthcare, my research focuses on the intersection of artificial intelligence and medical advancements. I have actively contributed to groundbreaking studies, including projects involving Brain-Computer Interfaces for stroke rehabilitation and the early detection of Parkinson's disease.
         </p>
-        <p>
-          As an intern at Dialog Axita PLC, I optimized notification delivery
-          for a vast customer base using reinforcement learning. I've also
-          contributed to groundbreaking research in Brain-Computer Interfaces
-          for stroke rehabilitation and early detection of Parkinson's disease.
-          With a robust skill set in TensorFlow, PyTorch, OpenAI APIs, and more,
-          I am committed to advancing AI solutions for real-world challenges.
+        <p class="intro mt-4">
+         In addition to my academic pursuits, I actively engage in extra-curricular activities. Serving as Vice President of the Ruhuna Engineering Gavel Club and President of IET On-Campus, I've organized impactful events and workshops. My industry experience includes an internship as an AI Solutions Engineer at Dialog Axiata PLC, where I optimized notification delivery for a vast customer base using reinforcement learning. Proficient in Python, JavaScript, and various machine learning libraries, I bring a comprehensive approach to problem-solving, contributing to both academia and the practical application of cutting-edge technologies in healthcare and beyond.
         </p>
       </div>
     </section>
+    <!-- Interests Section -->
+<!-- Interests Section -->
+<!-- Interests Section -->
+<section id="interests">
+  <div class="container">
+    <h2>Interests</h2>
+
+    <div id="interestsCarousel" class="carousel slide card" data-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Interest Cards Group 1 -->
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-around">
+            <div class="interest-card">
+              <h3>Edge ML</h3>
+              <p>implementing hardware level machine learninng</p>
+            </div>
+            <div class="interest-card">
+              <h3>BCI</h3>
+              <p>using brain compuer interface for medical research</p>
+            </div>
+            <div class="interest-card">
+              <h3>Reinforcement Learning</h3>
+              <p>Using reinforcement learning for oprimization and building adaptive systems</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interest Cards Group 2 -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-around">
+            <div class="interest-card">
+              <h3>EEG Analysis</h3>
+              <p>colletion of dry eeg and analysing dry and wet eeg data</p>
+            </div>
+            <div class="interest-card">
+              <h3>Time Series Analysis</h3>
+              <p>bringing insight for time series data from sensors/finance data</p>
+            </div>
+            <div class="interest-card">
+              <h3>Rehabilitation with AI</h3>
+              <p>experiaced with rehabilitation fo stroke and Parkinson using AI</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more carousel items with interest cards as needed -->
+
+      </div>
+
+      <!-- Navigation arrows -->
+      <a class="carousel-control-prev" href="#interestsCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#interestsCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
 
     <!-- Carousel Section -->
     <section id="carousel-section">
@@ -506,12 +611,17 @@
           </h3>
           <p>
            <ul>
-    <li>Developed a novel system predicting early Parkinson's using Handwriting, Voice, and gait data.</li>
-    <li>Hosted a mobile app with JS and Flask API to collect regular data.</li>
-    <li>Utilized transfer learning with VGG16 feature extraction, achieving a 98% accuracy in a multi-modal pipeline for predicting early Parkinson's.</li>
-  </ul>
+            <li>Developed a novel system predicting early Parkinson's using Handwriting, Voice, and gait data.</li>
+            <li>Hosted a mobile app with JS and Flask API to collect regular data.</li>
+            <li>Utilized transfer learning with VGG16 feature extraction, achieving a 98% accuracy in a multi-modal pipeline for predicting early Parkinson's.</li>
+          </ul>
           </p>
           <p>Skills - MERN, CNN, DT, LSTM, SVM</p>
+          <p>
+        GitHub Repository: <a href="https://github.com/muznyahamed/DataCollectionApp" target="_blank" rel="noopener noreferrer">
+            <i class="fa fa-github"></i> View on GitHub
+        </a>
+    </p>
         </div>
 
         <!-- Space between projects -->
