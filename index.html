@@ -10,7 +10,9 @@
     />
     <style>
       body {
-
+        background-image: url("background.jpg");
+        background-size: cover;
+        background-attachment: fixed;
         font-family: "Poppins", sans-serif;
         color: #333;
         margin: 0;
@@ -31,6 +33,9 @@
     max-width: 50%;
     height: auto;
   }
+  .container{
+    background-color: rgba(255, 255, 255, 0.7);
+  }
 
       /* Add your custom styles here */
 
@@ -41,6 +46,7 @@
 
       .card {
         border: none; /* Remove the border */
+        background-color: rgba(255, 255, 255, 0.7);
         margin: 20px 0;
         padding: 20px;
         border-radius: 5px;
@@ -64,10 +70,12 @@
 
       .project-card {
         border: none; /* Remove the border */
+        background-color: rgba(255, 255, 255, 0.7);
         margin: 20px 0;
         padding: 20px;
         border-radius: 5px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 0.7);
       }
 
       project-item {
@@ -135,6 +143,11 @@
   }
   .intro{
     text-align: center;
+  }
+  .container{
+  
+  background-color: rgba(255, 255, 255, 0.7); /* Set background color with 70% opacity */
+
   }
      
   
@@ -209,62 +222,80 @@
   <div class="container">
     <h2>Interests</h2>
 
-    <div id="interestsCarousel" class="carousel slide card" data-ride="carousel">
+    <div id="interestsCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
+
         <!-- Interest Cards Group 1 -->
         <div class="carousel-item active">
-          <div class="d-flex justify-content-around">
-            <div class="interest-card">
-              <h3>Edge ML</h3>
-              <p>implementing hardware level machine learninng</p>
+          <div class="row my-1">
+            <div class="col-md-4 my-auto">
+              <div class="interest-card">
+                <h3>Edge ML</h3>
+                <p>Implementing hardware level machine learning</p>
+              </div>
             </div>
-            <div class="interest-card">
-              <h3>BCI</h3>
-              <p>using brain compuer interface for medical research</p>
+            <div class="col-md-4 my-auto">
+              <div class="interest-card">
+                <h3>BCI</h3>
+                <p>Using brain computer interface for medical research</p>
+              </div>
             </div>
-            <div class="interest-card">
-              <h3>Reinforcement Learning</h3>
-              <p>Using reinforcement learning for oprimization and building adaptive systems</p>
+            <div class="col-md-4 my-auto">
+              <div class="interest-card">
+                <h3>Reinforcement Learning</h3>
+                <p>Using reinforcement learning for optimization and building adaptive systems</p>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Interest Cards Group 2 -->
         <div class="carousel-item">
-          <div class="d-flex justify-content-around">
-            <div class="interest-card">
-              <h3>EEG Analysis</h3>
-              <p>colletion of dry eeg and analysing dry and wet eeg data</p>
+          <div class="row my-1">
+            <div class="col-md-4 my-auto">
+              <div class="interest-card">
+                <h3>EEG Analysis</h3>
+                <p>Collection of dry EEG and analyzing dry and wet EEG data</p>
+              </div>
             </div>
-            <div class="interest-card">
-              <h3>Time Series Analysis</h3>
-              <p>bringing insight for time series data from sensors/finance data</p>
+            <div class="col-md-4 my-auto">
+              <div class="interest-card">
+                <h3>Time Series Analysis</h3>
+                <p>Bringing insight for time series data from sensors/finance data</p>
+              </div>
             </div>
-            <div class="interest-card">
-              <h3>Rehabilitation with AI</h3>
-              <p>experiaced with rehabilitation fo stroke and Parkinson using AI</p>
-            </div>
-          </div>
-        </div>
-         <div class="carousel-item">
-          <div class="d-flex justify-content-around">
-            <div class="interest-card">
-              <h3>LLM</h3>
-              <p>Fine Tuning LLMS Eg : GPT4, Google Palm</p>
-            </div>
-            <div class="interest-card">
-              <h3>Full Stack Development</h3>
-              <p>Development of full stack applications using ReactJS.,Node.js/Flask</p>
-            </div>
-            <div class="interest-card">
-              <h3>Realtime Visulization</h3>
-              <p>Visualization of Realtime streaming data using sophisticated charts using libraries like CanvasJS/AmCharts.</p>
+            <div class="col-md-4 my-auto">
+              <div class="interest-card">
+                <h3>Rehabilitation with AI</h3>
+                <p>Experienced with rehabilitation for stroke and Parkinson using AI</p>
+              </div>
             </div>
           </div>
         </div>
 
-
-        <!-- Add more carousel items with interest cards as needed -->
+        <!-- Interest Cards Group 3 -->
+        <div class="carousel-item">
+          <div class="row my-1">
+            <div class="col-md-4 my-auto">
+              <div class="interest-card">
+                <h3>LLM</h3>
+                <p>Fine Tuning LLMs e.g.: GPT-4, Google Palm</p>
+              </div>
+            </div>
+            <div class="col-md-4 my-auto">
+              <div class="interest-card">
+                <h3>Full Stack Development</h3>
+                <p>Development of full stack applications using ReactJS, Node.js/Flask</p>
+              </div>
+            </div>
+            <div class="col-md-4 my-auto">
+              <div class="interest-card">
+                <h3>Realtime Visualization</h3>
+                <p>Visualization of Realtime streaming data using sophisticated charts using libraries like CanvasJS/AmCharts.</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
 
@@ -278,8 +309,10 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
+
   </div>
 </section>
+
 
 
 
@@ -837,7 +870,7 @@ focused on efficient information retrieval from PDFs.</p>
         projectInfo.classList.toggle("show");
       }
       function toggleTheme() {
-        const body = document.body;
+        const body = document.body;c:\Users\Dell\Downloads\dominik-schroder-FIKD9t5_5zQ-unsplash.jpg
         const themeIcon = document.getElementById("theme-icon");
 
         body.classList.toggle("dark-mode");
